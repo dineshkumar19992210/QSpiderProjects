@@ -1,0 +1,29 @@
+package register;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Registerassinment {
+	
+	public static void main(String[]args) throws InterruptedException
+	{
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		driver.get("https://demowebshop.tricentis.com/");
+		driver.findElement(By.className("ico-register")).click();
+		driver.findElement(By.id("gender-male")).click();
+		driver.findElement(By.id("firstname")).sendKeys("dinesh");
+		driver.findElement(By.id("lastname")).sendKeys("kumar");
+		driver.findElement(By.id("email")).sendKeys("dineshrbkkrish@gamil.com");
+		driver.findElement(By.id("password")).sendKeys("Dineshkd@1999");
+		driver.findElement(By.id("confirmpassword")).sendKeys("Dineshkd@1998");
+		driver.findElement(By.id("register-button")).click();
+		Thread.sleep(5000);
+
+   }
+}
+
